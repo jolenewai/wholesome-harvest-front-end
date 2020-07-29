@@ -1,4 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
 body {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
+    font-size: 0.875em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.feather {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+h6 {
+    color: #168478;
+} 
+
+/* wrapper to hold logo, search bar and shopping cart icon */
+#topbar {
+    padding: 20px;
+}
+
+.search-wrapper {
+    float: right;
+    padding-top: 5px;
+}
+
+.cart-icon {
+    padding:10px;
+    color: #168478;
+}
+
+.cart-item-number {
+    display:block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FFAE2E;
+    color: #FFF;
+    font-size: 0.714em; /* 10px */
+    padding: 0 5px;
+    transform: translate(-5px, -5px);
+}
+
+/* form elements */
+.btn-yellow {
+    background-color: #FFAE2E;
+    color: #FFF;
+}
+
+a.btn-yellow :link, a.btn-yellow a:visited {
+    color: #FFF !important;
+}
+
+.btn .feather {
+    width: 16px;
+    height: 16px;
+    line-height: 1.29em;
+    transform: translate(0, -2px)
+}
+
+.btn {
+    padding: 8px 20px;
+    line-height: 1.28em;
+}
+
+/* nav settings */
+.navbar-green {
+    color: #FFF;
+}
+
+.bg-darkgreen {
+    background-color: #168478;
+}
+
+ul.navbar-nav > li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+ul.navbar-nav > li > a {
+    color: #FFF;
+}
+
+ul.navbar-nav > li > a:hover {
+    color: #FFAE2E;
+}
+
+ul.navbar-nav > li.active a:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 70%; /* Change this to whatever width you want. */
+    padding-top: 3px; /* This creates some space between the element and the border. */
+    border-bottom: 2px solid #FFAE2E; /* This creates the border. Replace black with whatever color you want.*/
+    transition: 2s ease-in-out;
+}
+
+
+/* Carousel items */
+.carousel .carousel-inner {
+    height:400px;
+}
+
+.carousel-inner .carousel-item img {
+    height:400px;
+    min-height:200px;
+    /* prevent it from stretch in screen size < than 768px */
+    object-fit:cover;
+    object-position: 50% 50%; /* default value: image is centered*/
+}
+
+.black-overlay {
+    height: 42%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.carousel-caption {
+    bottom: 28px;
+}
+
+.carousel-caption h5 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 4.14em;
+
+}
+
+.carousel-indicators {
+    margin-top: 8px;
+}
+
+.carousel-indicators li {
+    width:12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+
+/* Tabs related classes */
+.nav-tabs {
+    background-position: right center;
+    background-size: contain;
+    background-image: url('../images/logo_element.png');
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    background-color: #D09C00;
+    border-bottom: 0;
+    padding: 0 20px;
+}
+
+
+.nav-tabs li.nav-item:hover,
+.nav-tabs li.nav-item .active {
+    background-color: #F5F5F5;
+    border: 0;
+}
+
+.nav-tabs li.nav-item:hover a, 
+.nav-tabs li.nav-item .active {
+    color: #168478;
+    border: 0;
+}
+
+.nav-tabs li.nav-item a {
+    padding:10px 25px 0 25px;
+    border-radius: 0;
+    font-size:1.14em;
+    color: #FFF;
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: 0px;
+}
+
+.nav-tabs>li.nav-item>a>span {
+    line-height: 2em;
+}
+
+.nav-tabs li.nav-item a.active:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 100%; /* Change this to whatever width you want. */
+    padding-top: 9px; /* This creates some space between the element and the border. */
+    border-bottom: 3px solid #FFAE2E; /* This creates the border. Replace black with whatever color you want.*/
+    transition: 2s ease-in-out;
+}
+
+
+/* product gallery */
+
+div.products-wrapper {
+    width: 90%;
+    min-width: 90%;
+    margin: 10px auto;
+    padding: 0 2px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+
+div.products-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+div.products {
+    margin: 10px 0;
+    margin-right: -1px;
+    border: 1px solid #DBDBDB;
+    float: left;
+    min-width: 280px;
+    padding: 15px 20px;
+    height: 495px;
+}
+  
+div.products:hover {
+    background-color: #F5F5F5;
+}
+
+div.products img {
+    width: 100%;
+    height: auto;
+}
+
+div.products .desc {
+    padding: 15px;
+    text-align: center;
+}
+
+div.products .price {
+    color: #D09C00;
+    font-size: 1.29em;
+    font-weight: 500;
+    display:block;
+    margin: 8px 0;
+}
+
+div.products-wrapper-arrow
+{
+    width: 40px;
+    height: 495px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
